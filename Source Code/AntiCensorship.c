@@ -73,26 +73,39 @@ void archive_fo()
     strcat(cmd,url);
     system(cmd);
 }
-void main()
-{
-    int x=0,i=0;char ch;
-    system("title AntiCensorship Tool");
-    check_internet();
-    get_url();
-    printf("\n Anti-Censorship Menu:-\n\n");
+
+void menu()
+{   
+    int x=0;
+   printf("\n Anti-Censorship Menu:-\n\n");
     printf(" 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n\nEnter Choice:");
-    while(i!=1){
+    while(i!=1)
+    {
     i=scanf("%d",&x);
-    ch=scanf("%c",&ch);
-    if ((i!=1)||(x<1)||(x>4))
     printf("\n Please Enter a valid integer as a choice!");
+    ch=scanf("%c",&ch);
     }
+    load(x);
+ } 
+
+void load(int x)
+{
     switch(x)
     {
     case 1: {archive_fo(); break;}
     case 2: {internet_archive(); break;}
     case 3: {google_cache(); break;}
     case 4: { google_weblight(); break;}
+    default: { menu();exit(0);}
     }
+}
+     
+void main()
+{
+    int x=0,i=0;char ch;
+    system("title AntiCensorship Tool");
+    check_internet();
+    get_url();
+    menu();
     system("timeout 10");
 }
