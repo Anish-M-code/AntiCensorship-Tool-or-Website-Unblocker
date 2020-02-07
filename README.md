@@ -6,6 +6,8 @@ Antivirus Protections and force victim to visit compromised site.
 
 For more details about our experiment visit: https://outflaw.blogspot.com/2019/12/defeating-antivirus-detection-of.html
 
+For Download and short tutorial visit:https://outflaw.blogspot.com/2020/01/bypassing-blocks-using-anticensorship.html
+
 However this tool can also be used to access youtube,hotstar,voot in Schools where it is blocked.
 
 THE DEVELOPER WILL NOT BE RESPONSIBLE FOR ANY DAMAGES ARISING FROM THE USE OF THIS TOOL. THE USERS WILL BE FULLY
