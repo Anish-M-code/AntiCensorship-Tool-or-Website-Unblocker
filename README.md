@@ -1,8 +1,8 @@
 # AntiCensorship-Tool
 A Simple AntiCensorship Tool developed using C Programming Language for Windows.
 
-This Tool was developed to Test if Malware developers could use proxy services to bypass
-Antivirus Protections and force victim to visit compromised site.
+This Tool was intially developed to Test if Malware developers could use proxy services to bypass
+Firewall Protections.
 
 For more details about our experiment visit: https://outflaw.blogspot.com/2019/12/defeating-antivirus-detection-of.html
 
