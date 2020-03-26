@@ -1,5 +1,5 @@
 # AntiCensorship-Tool
-A Simple AntiCensorship Tool developed using C Programming Language for Windows.
+A Simple AntiCensorship Tool developed using C/C++ Programming Language for Windows.
 This Tool was intially developed to Test if Malware developers could use proxy services to bypass
 Firewall Protections.
 
