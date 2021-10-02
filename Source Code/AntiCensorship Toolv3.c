@@ -168,7 +168,7 @@ void menu()
     char ch;
     system("cls");
    printf("\n Select services given below to unblock website. \n\n");
-    printf("Difficult To Block Services\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n 5)Searx \n 6)Startpage \n 7)Hypothes.is \n 8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n\nProxy Sites \n\n 10)Proxysite \n 11)Hidester Proxy \n 12)Kproxy  \n 13)Hide.me Proxy\n 14)HMA Proxy \n\nEnter Choice:");
+    printf("Difficult To Block Services\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n 5)Searx \n 6)Startpage \n 7)Hypothes.is \n 8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n\nProxy Sites \n\n 10)Proxysite \n 11)Hidester Proxy \n 12)Kproxy  \n 13)Hide.me Proxy\n 14)HMA Proxy \n\n 15)Enter Another URL \n\nEnter Choice:");
     while(i!=1)
     {
     i=scanf("%d",&x);
@@ -183,6 +183,7 @@ void menu()
 //Function to Load appropriate proxy service based on user selection. 
 void load(int x)
 {
+	char ch;
     switch(x)
     {
     case 1: {archive_fo(); menu();break;}
@@ -199,6 +200,7 @@ void load(int x)
     case 12: {kproxy();menu();break;}
     case 13: {hideproxy();menu();break;}
     case 14:  {hma();menu();break;}
+    case 15: { scanf("%c",&ch);get_url();menu();break;}
     default: { menu();exit(0);}
     }
 }

@@ -191,7 +191,7 @@ void control::menu()
     char ch;
     system("cls");
     cout<<"\n Select services given below to unblock website. \n\n";
-    cout<<"Difficult To Block Services\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n 5)Searx \n 6)Startpage \n 7)Hypothes.is \n 8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n\nProxy Sites \n\n 10)Proxysite \n 11)Hidester Proxy \n 12)Kproxy  \n 13)Hide.me Proxy\n 14)HMA Proxy \n\nEnter Choice:";
+    cout<<"Difficult To Block Services\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n 5)Searx \n 6)Startpage \n 7)Hypothes.is \n 8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n\nProxy Sites \n\n 10)Proxysite \n 11)Hidester Proxy \n 12)Kproxy  \n 13)Hide.me Proxy\n 14)HMA Proxy \n\n 15) Enter another URL  \n\nEnter Choice:";
     cin>>x;
     load(x);
  }
@@ -215,7 +215,10 @@ void control::load(int x)
     case 12: {kproxy();menu();break;}
     case 13: {hideproxy();menu();break;}
     case 14:  {hma();menu();break;}
-    default: { menu();exit(0);}
+    case 15: { char ch; cin.get(ch); get_url();  menu();
+		break;
+	}
+    default: { menu();}
     }
 }
 
