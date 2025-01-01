@@ -1,5 +1,5 @@
 // AntiCensorship Tool
-// Copyright (C) 2018-2020 M.Anish <aneesh25861@gmail.com>
+// Copyright (C) 2018-2025 M.Anish <aneesh25861@gmail.com>
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -20,7 +20,6 @@
 #include<cstdlib>
 #include<cstring>
 
-
 using namespace std;
 
 class control
@@ -31,18 +30,23 @@ void internet_archive();
 void web_request( char *);
 void web_request2(char *,char *);
 void web( char *);
-void google_cache();
-void google_weblight();
+void browser_lol();
 void startpage();
-void searx();
 void cloud();
 void pdfcrowd();
 void pdfmyurl();
-void proxysite();
 void hidester();
 void kproxy();
 void hideproxy();
-void hma();
+void browserling();
+void network_chunk();
+void visual();
+void locabrowser();
+void geotargetly();
+void archive_ph();
+void ghost();
+void removepaywall();
+void l2ftio();
 void load(int);
 public:
 void check_internet();
@@ -53,7 +57,7 @@ void menu();
 //To check if internet connection is available or not.
 void control::check_internet()
 {
-    if (system("ping tails.boum.org")!=0)
+    if (system("ping google.com")!=0)
     {
         system("cls");
         cout<<" \nInternet Connection is Not Available!\n ";
@@ -100,16 +104,16 @@ void control::web( char a[180])
 	system(tmp);
 }
 
-//Connect Google cache Service.
-void control::google_cache()
+//Connect Browser.lol service
+void control::browser_lol()
 {
-    web_request("https://webcache.googleusercontent.com/search?q=cache:");
+    web("https://browser.lol");
 }
 
-//Connect Google Weblight service.
-void control::google_weblight()
+//connect to network chuck
+void control::network_chunk()
 {
-    web_request("https://googleweblight.com/i?u=");
+    web("https://browser.networkchuck.com/");
 }
 
 //Connect Internet Archive service.
@@ -121,13 +125,14 @@ void control::internet_archive()
 //Connect Archive fo Internet Archiving service.
 void control::archive_fo()
 {
-    web_request("https://archive.fo/\?run=1^&url=");
+    web_request("https://archive.fo/");
+
 }
 
-//Connect Searx Search Engine Service.
-void control::searx()
+void control::archive_ph()
 {
-    web_request2("https://searx.info/\?q=","^&categories=general^&language=en-US");
+    web_request("https://archive.ph/");
+
 }
 
 //Connect Startpage Search Engine Service.
@@ -136,10 +141,10 @@ void control::startpage()
     web_request("https://www.startpage.com/do/search\?^&q=");
 }
 
-//Connect Proxysite Proxy service.
-void control::proxysite()
+//Connect GeoTargetly Proxy service.
+void control::geotargetly()
 {
-    web_request2("https://eu6.proxysite.com/process.php?d=","^&b=1");
+    web_request("https://geotargetly.com/geo-browse?geobrowse=");
 }
 
 //Connect via.hypothesis Annotation service.
@@ -166,12 +171,6 @@ void control::hideproxy()
     web("https://hide.me/en/proxy");
 }
 
-//connect hidemyass proxy service.
-void control::hma()
-{
-    web("https://www.hidemyass.com/proxy");
-}
-
 //Connect pdfcrowd webpage to PDF conversion service.
 void control::pdfcrowd()
 {
@@ -184,6 +183,39 @@ void control::pdfmyurl()
     web("https://pdfmyurl.com/");
 }
 
+//Connect Browserling Testing service.
+void control::browserling()
+{
+    web_request("https://www.browserling.com/browse/win10/chrome127/");
+}
+
+//Connect Ghost Archive service.
+void control::ghost()
+{
+    web_request("https://ghostarchive.org/search?term=");
+}
+
+void control::removepaywall()
+{
+    web_request("https://www.removepaywall.com/search?url=");
+}
+
+void control::l2ftio()
+{
+    web_request("https://12ft.io/");
+}
+
+void control::locabrowser()
+{
+    web("https://www.locabrowser.com/");
+}
+
+void control::visual()
+{
+    web("https://visualping.io/");
+}
+
+
 //Main Display Menu.
 void control::menu()
 {
@@ -191,7 +223,12 @@ void control::menu()
     char ch;
     system("cls");
     cout<<"\n Select services given below to unblock website. \n\n";
-    cout<<"Difficult To Block Services\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Google Cache \n 4)Googleweblight \n 5)Searx \n 6)Startpage \n 7)Hypothes.is \n 8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n\nProxy Sites \n\n 10)Proxysite \n 11)Hidester Proxy \n 12)Kproxy  \n 13)Hide.me Proxy\n 14)HMA Proxy \n\n 15) Enter another URL  \n\nEnter Choice:";
+    cout<<"Difficult To Block Services"
+    <<"\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Archive Today \n 4)Ghost Archive \n 5)Browserling \n 6)Startpage \n 7)Hypothes.is \n "
+    <<"8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n 10)Browser lol virtual browser \n 11)Network chunk cloud Browser"
+    <<"\n 12)Visual ping website change Detection \n 13)LocaBrowser website Testing \n 14)Geotargetly website Testing"
+    <<"\n 15)12ft.io remove paywall \n 16)Remove paywall \n\nProxy Sites \n\n 17)Proxysite \n 18)Hideme Proxy \n"
+    <<" \n 19)Hide.me Proxy\n 20)Enter another URL  \n\nEnter Choice:";
     cin>>x;
     load(x);
  }
@@ -201,25 +238,31 @@ void control::load(int x)
 {
     switch(x)
     {
-    case 1: {archive_fo(); menu();break;}
-    case 2: {internet_archive();menu(); break;}
-    case 3: {google_cache();menu(); break;}
-    case 4: { google_weblight();menu(); break;}
-    case 6:{ startpage();menu();break;}
-    case 5: {searx();menu();break;}
-    case 7: {cloud();menu();break;}
-    case 8: {pdfcrowd();menu();break;}
-    case 9: {pdfmyurl();menu();break;}
-    case 10: {proxysite();menu();break;}
-    case 11: {hidester();menu();break;}
-    case 12: {kproxy();menu();break;}
-    case 13: {hideproxy();menu();break;}
-    case 14:  {hma();menu();break;}
-    case 15: { char ch; cin.get(ch); get_url();  menu();
+    case 1: {archive_fo();break;}
+    case 2: {internet_archive(); break;}
+    case 3: {archive_ph(); break;}
+    case 4: { ghost(); break;}
+	case 5: { browserling(); break;}
+    case 6:{ startpage();break;}
+    case 7: {cloud();break;}
+    case 8: {pdfcrowd();break;}
+    case 9: {pdfmyurl();break;}
+    case 10: { browser_lol();break;}
+    case 11: { network_chunk();break;}
+	case 12: { visualping();break;}
+	case 13: { locabrowser();break;}
+	case 14: { geotargetly();break;}
+    case 15: { l2ftio();break;}
+	case 16: { removepaywall();break;}
+    case 17: { proxysite();break;}
+    case 18: { locabrowser();break;}
+    case 19: { locabrowser();break;}
+    case 20: { char ch; cin.get(ch); get_url();
 		break;
 	}
     default: { menu();}
     }
+	menu();
 }
 
 
