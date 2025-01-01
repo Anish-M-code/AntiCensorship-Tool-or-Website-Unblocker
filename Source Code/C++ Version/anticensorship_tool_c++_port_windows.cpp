@@ -162,7 +162,7 @@ void control::kproxy()
 //Connect Hidester proxy service.
 void control::hidester()
 {
-    web("https://hidester.com/proxy/");
+    web("https://www.proxysite.com/");
 }
 
 //Connect hideproxy proxy service.
@@ -228,7 +228,7 @@ void control::menu()
     <<"8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n 10)Browser lol virtual browser \n 11)Network chunk cloud Browser"
     <<"\n 12)Visual ping website change Detection \n 13)LocaBrowser website Testing \n 14)Geotargetly website Testing"
     <<"\n 15)12ft.io remove paywall \n 16)Remove paywall \n\nProxy Sites \n\n 17)KProxy \n 18)Hideme Proxy \n"
-    <<" \n 19)Hidester Proxy\n 20)Enter another URL  \n\nEnter Choice:";
+    <<" \n 19)Proxysite \n 20)Enter another URL  \n\nEnter Choice:";
     cin>>x;
     load(x);
  }
