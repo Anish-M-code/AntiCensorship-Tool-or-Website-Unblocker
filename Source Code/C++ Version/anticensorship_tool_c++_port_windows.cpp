@@ -162,7 +162,7 @@ void control::kproxy()
 //Connect Hidester proxy service.
 void control::hidester()
 {
-    web("https://hidester.com/proxy/");
+    web("https://www.proxysite.com/");
 }
 
 //Connect hideproxy proxy service.
@@ -227,8 +227,8 @@ void control::menu()
     <<"\n\n 1)Archive Fo \n 2)Internet Archive \n 3)Archive Today \n 4)Ghost Archive \n 5)Browserling \n 6)Startpage \n 7)Hypothes.is \n "
     <<"8)Webpage to pdf using pdfcrowd \n 9)Webpage to pdf using pdfmyurl \n 10)Browser lol virtual browser \n 11)Network chunk cloud Browser"
     <<"\n 12)Visual ping website change Detection \n 13)LocaBrowser website Testing \n 14)Geotargetly website Testing"
-    <<"\n 15)12ft.io remove paywall \n 16)Remove paywall \n\nProxy Sites \n\n 17)Proxysite \n 18)Hideme Proxy \n"
-    <<" \n 19)Hide.me Proxy\n 20)Enter another URL  \n\nEnter Choice:";
+    <<"\n 15)12ft.io remove paywall \n 16)Remove paywall \n\nProxy Sites \n\n 17)KProxy \n 18)Hideme Proxy \n"
+    <<" \n 19)Proxysite \n 20)Enter another URL  \n\nEnter Choice:";
     cin>>x;
     load(x);
  }
@@ -254,9 +254,9 @@ void control::load(int x)
 	case 14: { geotargetly();break;}
     case 15: { l2ftio();break;}
 	case 16: { removepaywall();break;}
-    case 17: { proxysite();break;}
-    case 18: { locabrowser();break;}
-    case 19: { locabrowser();break;}
+    case 17: { kproxy();break;}
+    case 18: { hideproxy();break;}
+    case 19: { hidester();break;}
     case 20: { char ch; cin.get(ch); get_url();
 		break;
 	}
